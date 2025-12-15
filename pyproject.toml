@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "analytica"
+version = "0.1.0"
+description = "Modular data analysis and ML workflow toolkit"
+authors = [{ name="Ridhisha Tyagi" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "imbalanced-learn"
+]
