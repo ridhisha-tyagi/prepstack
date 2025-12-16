@@ -25,7 +25,7 @@ def left_join(df1, df2, on, suffixes=("_left", "_right"), guidance="off"):
     missing_matches = merged[on].isna().sum()
     if missing_matches > 0:
         _guide(f"⚠️ {missing_matches} rows could not find a match in df2.", guidance)
-        _guide("👉 Suggested next step: analytica.cleaning.fill_missing()", guidance)
+        _guide("👉 Suggested next step: Prepstack.cleaning.fill_missing()", guidance)
 
     # merge explosion detection
     if after > before:

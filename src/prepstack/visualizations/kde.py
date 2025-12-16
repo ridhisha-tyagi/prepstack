@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from analytica.visualizations.themes import apply_theme
+from prepsatck.visualizations.themes import apply_theme
 import seaborn as sns
 
 def plot_kde(df, column, guidance="off"):

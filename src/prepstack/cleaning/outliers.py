@@ -1,7 +1,7 @@
 from typing import Optional, Sequence
 import pandas as pd
 import numpy as np
-from analytica.helpers import say, GuidanceMode
+from Prepstack.helpers import say, GuidanceMode
 
 
 def cap_outliers_iqr(

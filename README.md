@@ -1,8 +1,8 @@
-Analytica
+Prepstack
 
-Analytica is a modular data analysis and machine learning workflow toolkit designed to reduce repetitive preprocessing, validation, and experimentation overhead while preserving full transparency and user control.
+Prepstack is a modular data analysis and machine learning workflow toolkit designed to reduce repetitive preprocessing, validation, and experimentation overhead while preserving full transparency and user control.
 
-It provides explicit, composable building blocks for common analytical and ML tasks, with optional guidance for interpretability and correctness.
+It provides explicit, composable building blocks for common Prepstackl and ML tasks, with optional guidance for interpretability and correctness.
 
 #Design Principles
 
@@ -13,7 +13,7 @@ It provides explicit, composable building blocks for common analytical and ML ta
    Each step is independently callable and testable.
 
 ⦁	Guardrails, not automation
-   Analytica highlights risks and inconsistencies without enforcing opinionated pipelines.
+   Prepstack highlights risks and inconsistencies without enforcing opinionated pipelines.
 
 ⦁	Learning-aware execution
    Optional guidance explains what is happening and why, without changing results.
@@ -25,7 +25,7 @@ It provides explicit, composable building blocks for common analytical and ML ta
 
 #Installation
 
-pip install analytica
+pip install Prepstack
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -37,21 +37,21 @@ guidance="on"   # descriptive output, warnings, suggestions
 guidance="off"  # silent execution
 
 
-This allows Analytica to be used both as a learning aid and as a production utility.
+This allows Prepstack to be used both as a learning aid and as a production utility.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Module Overview
 
-⦁	analytica.cleaning - Basic data hygiene and structural cleanup
+⦁	Prepstack.cleaning - Basic data hygiene and structural cleanup
 
-⦁	analytica.transform - Feature transformation, encoding, scaling, joins, and aggregation
+⦁	Prepstack.transform - Feature transformation, encoding, scaling, joins, and aggregation
 
-⦁	analytica.explore - Structured exploratory analysis
+⦁	Prepstack.explore - Structured exploratory analysis
 
-⦁	analytica.model_prep - Validation, feature selection, splitting, and class balancing
+⦁	Prepstack.model_prep - Validation, feature selection, splitting, and class balancing
 
-⦁	analytica.model - Model fitting and prediction wrappers
+⦁	Prepstack.model - Model fitting and prediction wrappers
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -68,14 +68,14 @@ df = pd.DataFrame({
     "churn": [0,0,1,1,0]*10
 })
 
-from analytica.cleaning import clean_basic
-from analytica.transform.columns import encoding, scaling, string_ops
-from analytica.model_prep.feature_selection import combined_feature_selection
-from analytica.model_prep.splits import stratified_split
-from analytica.model_prep.class_balance import smote_balance
-from analytica.model_prep.validation.core import validate_full
-from analytica.model import fit_model, predict
-from analytica.model_prep.evaluation import classification_metrics, evaluation_summary
+from Prepstack.cleaning import clean_basic
+from Prepstack.transform.columns import encoding, scaling, string_ops
+from Prepstack.model_prep.feature_selection import combined_feature_selection
+from Prepstack.model_prep.splits import stratified_split
+from Prepstack.model_prep.class_balance import smote_balance
+from Prepstack.model_prep.validation.core import validate_full
+from Prepstack.model import fit_model, predict
+from Prepstack.model_prep.evaluation import classification_metrics, evaluation_summary
 
 # 1️⃣ CLEAN
 df1 = clean_basic(df, guidance="on")
@@ -145,7 +145,7 @@ evaluation_summary(metrics, task="classification", guidance="on")
 
 #Scope & Non-Goals
 
-Analytica does not aim to replace:
+Prepstack does not aim to replace:
 
 ⦁	pandas
 

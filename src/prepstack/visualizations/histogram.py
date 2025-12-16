@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from analytica.visualizations.themes import apply_theme
+from prepstack.visualizations.themes import apply_theme
 
 def plot_histogram(df, column, bins=30, guidance="off"):
     apply_theme()

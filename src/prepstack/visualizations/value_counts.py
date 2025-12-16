@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from analytica.visualizations.themes import apply_theme
+from prepstack.visualizations.themes import apply_theme
 
 def plot_value_counts(df, column, guidance="off"):
     apply_theme()

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-from analytica.visualizations.themes import apply_theme
+from prepstack.visualizations.themes import apply_theme
 
 def plot_correlation_heatmap(df, guidance="off"):
     apply_theme()

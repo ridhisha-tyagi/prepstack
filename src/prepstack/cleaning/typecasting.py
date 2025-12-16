@@ -1,6 +1,6 @@
 from typing import Optional, Sequence, Dict
 import pandas as pd
-from analytica.helpers import say, GuidanceMode
+from Prepstack.helpers import say, GuidanceMode
 
 
 def cast_columns(

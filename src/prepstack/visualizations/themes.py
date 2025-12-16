@@ -3,7 +3,7 @@ import matplotlib.font_manager as fm
 import os
 
 # =====================================================
-# 1. APPLY DEFAULT ANALYTICA THEME
+# 1. APPLY DEFAULT PREPSTACK THEME
 # =====================================================
 def apply_theme():
 
