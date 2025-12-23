@@ -1,6 +1,44 @@
 from typing import Optional, Sequence
 import pandas as pd
-from Prepstack.helpers import say, GuidanceMode
+from prepstack.helpers import say, GuidanceMode
+
+import pandas as pd
+
+def clean_duplicates(df, subset=None, keep="first", guidance="on"):
+    """
+    Remove duplicate rows from a DataFrame.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+    subset : list or None
+        Columns to consider for duplicate detection.
+    keep : {"first", "last", False}
+        Which duplicates to keep.
+    guidance : {"on", "off"}
+        Print what is happening.
+
+    Returns
+    -------
+    pandas.DataFrame
+    """
+
+    df = df.copy()
+    before = len(df)
+
+    df = df.drop_duplicates(subset=subset, keep=keep)
+
+    after = len(df)
+
+    if guidance == "on":
+        removed = before - after
+        print(f"🧹 Duplicate cleaning complete")
+        print(f" • Rows before: {before}")
+        print(f" • Rows after : {after}")
+        print(f" • Removed    : {removed}")
+
+    return df
+
 
 
 def drop_full_duplicates(

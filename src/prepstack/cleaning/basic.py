@@ -1,6 +1,6 @@
 from typing import Optional
 import pandas as pd
-from Prepstack.helpers import say, GuidanceMode
+from prepstack.helpers import say, GuidanceMode
 
 
 def clean_basic(

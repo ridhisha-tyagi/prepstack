@@ -24,7 +24,7 @@ def check_dependency(package, install_cmd=None, guidance="on"):
 
 def check_core_dependencies(guidance="on"):
     """
-    Check the essential dependencies for Prepstack.
+    Check the essential dependencies for prepstack.
     """
 
     missing_any = False

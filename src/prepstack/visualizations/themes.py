@@ -3,7 +3,7 @@ import matplotlib.font_manager as fm
 import os
 
 # =====================================================
-# 1. APPLY DEFAULT PREPSTACK THEME
+# 1. APPLY DEFAULT prepstack THEME
 # =====================================================
 def apply_theme():
 

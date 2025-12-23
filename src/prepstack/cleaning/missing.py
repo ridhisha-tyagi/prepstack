@@ -1,7 +1,7 @@
 from typing import Literal, Optional, Sequence
 import pandas as pd
 import numpy as np
-from Prepstack.helpers import say, GuidanceMode
+from prepstack.helpers import say, GuidanceMode
 
 NumericStrategy = Literal["mean", "median", "zero"]
 CatStrategy = Literal["mode", "constant"]

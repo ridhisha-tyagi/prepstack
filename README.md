@@ -1,8 +1,15 @@
-Prepstack
+prepstack
 
-Prepstack is a modular data analysis and machine learning workflow toolkit designed to reduce repetitive preprocessing, validation, and experimentation overhead while preserving full transparency and user control.
+# Prepstack
 
-It provides explicit, composable building blocks for common Prepstackl and ML tasks, with optional guidance for interpretability and correctness.
+![PyPI](https://img.shields.io/pypi/v/prepstack)
+![Python](https://img.shields.io/pypi/pyversions/prepstack)
+
+A modular data preparation and ML workflow toolkit focused on clarity, reusability, and explainability.
+
+prepstack is a modular data analysis and machine learning workflow toolkit designed to reduce repetitive preprocessing, validation, and experimentation overhead while preserving full transparency and user control.
+
+It provides explicit, composable building blocks for common prepstackl and ML tasks, with optional guidance for interpretability and correctness.
 
 #Design Principles
 
@@ -13,7 +20,7 @@ It provides explicit, composable building blocks for common Prepstackl and ML ta
    Each step is independently callable and testable.
 
 ⦁	Guardrails, not automation
-   Prepstack highlights risks and inconsistencies without enforcing opinionated pipelines.
+   prepstack highlights risks and inconsistencies without enforcing opinionated pipelines.
 
 ⦁	Learning-aware execution
    Optional guidance explains what is happening and why, without changing results.
@@ -21,13 +28,11 @@ It provides explicit, composable building blocks for common Prepstackl and ML ta
 ⦁	Notebook and production friendly
    Identical APIs for exploration and deployment.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Installation
 
-pip install Prepstack
+pip install prepstack
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Guidance Mode
 
@@ -37,23 +42,21 @@ guidance="on"   # descriptive output, warnings, suggestions
 guidance="off"  # silent execution
 
 
-This allows Prepstack to be used both as a learning aid and as a production utility.
+This allows prepstack to be used both as a learning aid and as a production utility.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Module Overview
 
-⦁	Prepstack.cleaning - Basic data hygiene and structural cleanup
+⦁	prepstack.cleaning - Basic data hygiene and structural cleanup
 
-⦁	Prepstack.transform - Feature transformation, encoding, scaling, joins, and aggregation
+⦁	prepstack.transform - Feature transformation, encoding, scaling, joins, and aggregation
 
-⦁	Prepstack.explore - Structured exploratory analysis
+⦁	prepstack.explore - Structured exploratory analysis
 
-⦁	Prepstack.model_prep - Validation, feature selection, splitting, and class balancing
+⦁	prepstack.model_prep - Validation, feature selection, splitting, and class balancing
 
-⦁	Prepstack.model - Model fitting and prediction wrappers
+⦁	prepstack.model - Model fitting and prediction wrappers
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Example Workflow
 
@@ -68,14 +71,14 @@ df = pd.DataFrame({
     "churn": [0,0,1,1,0]*10
 })
 
-from Prepstack.cleaning import clean_basic
-from Prepstack.transform.columns import encoding, scaling, string_ops
-from Prepstack.model_prep.feature_selection import combined_feature_selection
-from Prepstack.model_prep.splits import stratified_split
-from Prepstack.model_prep.class_balance import smote_balance
-from Prepstack.model_prep.validation.core import validate_full
-from Prepstack.model import fit_model, predict
-from Prepstack.model_prep.evaluation import classification_metrics, evaluation_summary
+from prepstack.cleaning import clean_basic
+from prepstack.transform.columns import encoding, scaling, string_ops
+from prepstack.model_prep.feature_selection import combined_feature_selection
+from prepstack.model_prep.splits import stratified_split
+from prepstack.model_prep.class_balance import smote_balance
+from prepstack.model_prep.validation.core import validate_full
+from prepstack.model import fit_model, predict
+from prepstack.model_prep.evaluation import classification_metrics, evaluation_summary
 
 # 1️⃣ CLEAN
 df1 = clean_basic(df, guidance="on")
@@ -127,13 +130,12 @@ metrics = classification_metrics(y_test, preds, guidance="on")
 
 evaluation_summary(metrics, task="classification", guidance="on")
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Intended Use Cases
 
 ⦁	Reusable analytics pipelines
 
-⦁	SaaS / churn / behavioral datasets
+⦁	SaaS / churn / behavioural datasets
 
 ⦁	ML experimentation with safety checks
 
@@ -141,11 +143,10 @@ evaluation_summary(metrics, task="classification", guidance="on")
 
 ⦁	Teams that want consistency without abstraction loss
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Scope & Non-Goals
 
-Prepstack does not aim to replace:
+prepstack does not aim to replace:
 
 ⦁	pandas
 
