@@ -2,7 +2,7 @@ prepstack
 
 # Prepstack
 
-[![PyPI](https://pypi.org/project/prepstack/)
+[![PyPI](https://img.shields.io/pypi/v/prepstack)](https://pypi.org/project/prepstack/)
 
 
 A modular data preparation and ML workflow toolkit focused on clarity, reusability, and explainability.
